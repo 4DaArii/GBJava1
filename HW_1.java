@@ -20,11 +20,27 @@ class HW_1{
 		boolean i = true;
 		
 		System.out.println(calculate(3, 7, 54, 9));
+		System.out.println(SumInBorders(3, 4));
 	}
 	
-	//Задание3. Метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,  где a, b, c, d – входные параметры этого метода
+	/*Задание3 . Метод вычисляющий a * (b + (c / d))
+	 *и возвращающий результат, 
+	 *где a, b, c, d – входные параметры этого метода
+	 */
 	public static int calculate(int a, int b, int c, int d){
 		return a * (b + (c / d));
 	}
 	
+	/*Задание 4. Метод, принимающий на вход два числа,
+	 *и проверяющий что их сумма лежит в пределах от 10 до 20(включительно),
+	 *если да – вернуть true, в противном случае – false
+	 */
+	 public static boolean SumInBorders(int num_1, int num_2){
+		int sum = num_1 + num_2;
+		if ((sum >= 10) && (sum <= 20)){
+			return true;
+		} else{
+			return false;
+		}
+	}
 }
