@@ -21,6 +21,7 @@ class HW_1{
 		
 		System.out.println(calculate(3, 7, 54, 9));
 		System.out.println(SumInBorders(3, 4));
+		NegativeOrPositive(7);
 	}
 	
 	/*Задание3 . Метод вычисляющий a * (b + (c / d))
@@ -41,6 +42,18 @@ class HW_1{
 			return true;
 		} else{
 			return false;
+		}
+	}
+	
+	/*Задание 5. Метод, которому в качестве параметра передается целое число, 
+	 *метод должен напечатать в консоль положительное ли число передали, или отрицательное;
+	 *Замечание: ноль считаем положительным числом.
+	 */
+	public static void NegativeOrPositive(int num){
+		if (num < 0){
+			System.out.println(num + " - negative number");
+		} else{
+			System.out.println(num + " - positive number");
 		}
 	}
 }
