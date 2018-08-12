@@ -24,6 +24,7 @@ class HW_1{
 		NegativeOrPositive(7);
 		System.out.println(IsNegative(0));
 		HelloName("Sergey");
+		LeapOrNot(2000);
 	}
 	
 	/*Задание 3. Метод вычисляющий a * (b + (c / d))
@@ -75,5 +76,19 @@ class HW_1{
 	 */
 	public static void HelloName(String name){
 		System.out.println("Hello, " + name + "!");
+	}
+	
+	/*Задание 8. Метод, который определяет является ли год високосным,
+	 *выводит сообщение в консоль. 
+	 *Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+	 */
+	public static void LeapOrNot(int year){
+		if (year % 400 == 0){
+			System.out.println(year + " - leap year");
+		} else if ((year % 4 == 0) && (year % 100 != 0)){
+			System.out.println(year + " - leap year");
+		} else{
+			System.out.println(year + " - not a leap year");
+		}
 	}
 }
