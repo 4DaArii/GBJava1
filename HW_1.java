@@ -23,6 +23,7 @@ class HW_1{
 		System.out.println(SumInBorders(3, 4));
 		NegativeOrPositive(7);
 		System.out.println(IsNegative(0));
+		HelloName("Sergey");
 	}
 	
 	/*Задание 3. Метод вычисляющий a * (b + (c / d))
@@ -67,5 +68,12 @@ class HW_1{
 		} else{
 			return false;
 		}
+	}
+	
+	/*Задание 7. Метод, которому в качестве параметра передается строка, обозначающая имя,
+	 *метод должен вывести в консоль сообщение «Hello, указанное_имя!».
+	 */
+	public static void HelloName(String name){
+		System.out.println("Hello, " + name + "!");
 	}
 }
