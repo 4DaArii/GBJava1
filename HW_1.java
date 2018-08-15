@@ -1,7 +1,7 @@
 /**
  *Java 1. Lesson 1. Homework
  *
- *@Daria Vdovenko
+ *@author Daria Vdovenko
  *@version Aug 12, 2018
  */
  
