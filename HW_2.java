@@ -2,7 +2,7 @@
  * Java 1. Lesson 2. Homework
  *
  * @author Daria Vdovenko
- * @version dated Aug 15, 2018
+ * @version dated Aug 16, 2018
  */
 
 class HW_2 {
@@ -18,6 +18,10 @@ class HW_2 {
         
         //call for task #4
         diagUnit();
+        
+        //call for task #5
+        arrMinMax();
+        changeUnderSix();
     }
     
     /**
@@ -25,8 +29,8 @@ class HW_2 {
      *    С помощью цикла и условия заменить 0 на 1, 1 на 0;
      */
     public static void invertArray() {
-        int[] arr = { 0, 1, 1, 0, 1, 0, 1, 0, 1, 1 };//length = 8
         System.out.println("Задание 1 ");
+        int[] arr = { 0, 1, 1, 0, 1, 0, 1, 0, 1, 1 };//length = 8
         for (int i = 0; i < arr.length; i++) {
             System.out.print((arr[i] == 1)? 0 : 1);
         }
@@ -38,8 +42,8 @@ class HW_2 {
      *    С помощью цикла заполнить его значениями 0 3 6 9 12 15 18 21;
      */
     public static void addToArray() {
-        int[] arr = new int[8];
         System.out.println("Задание 2 ");
+        int[] arr = new int[8];
         for (int i = 0; i < arr.length; i++) {
             System.out.print((arr[i] = i * 3) + " ");
         }
@@ -51,8 +55,8 @@ class HW_2 {
      *    пройти по нему циклом, и числа меньшие 6 умножить на 2;
      */
     public static void changeUnderSix() {
-        int[] arr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
         System.out.println("Задание 3 ");
+        int[] arr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
         for (int i = 0; i < arr.length; i++) {
             System.out.print(" " + ((arr[i] < 6)? (arr[i] * 2) : arr[i]));
         }
@@ -64,8 +68,8 @@ class HW_2 {
      *    и с помощью цикла заполнить его диагональные элементы единицами;
      */
     public static void diagUnit() {
-        int[][] arr = new int[5][5];
         System.out.println("Задание 4 ");
+        int[][] arr = new int[5][5];
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < 5; j++) {
                 if ((i == j) || (j == 4 - i)) {
@@ -75,6 +79,25 @@ class HW_2 {
             }
         System.out.println();
         }
-        System.out.println();
+    }
+    
+    /**
+     * 5. Задать одномерный массив,
+     *    найти в нем минимальный и максимальный элементы
+     */
+    public static void arrMinMax() {
+        System.out.println("Задание 5 ");
+        int[] arr = { 3, 8, -4, 0, 1, 11, -23, 14, 5, 8 };//min = -23; max = 14
+        int min = arr[0];
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+    System.out.println("Min = " + min + "; Max = " + max);
     }
 }
