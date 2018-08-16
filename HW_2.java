@@ -21,7 +21,6 @@ class HW_2 {
         
         //call for task #5
         arrMinMax();
-        changeUnderSix();
     }
     
     /**
