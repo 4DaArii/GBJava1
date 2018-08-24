@@ -100,17 +100,28 @@ class TicTacToe {
     }
 
     boolean checkWin(char dot) {
-        // check horizontals
-        if (map[0][0] == dot && map[0][1] == dot && map[0][2] == dot) return true;
-        if (map[1][0] == dot && map[1][1] == dot && map[1][2] == dot) return true;
-        if (map[2][0] == dot && map[2][1] == dot && map[2][2] == dot) return true;
-        // check verticals
-        if (map[0][0] == dot && map[1][0] == dot && map[2][0] == dot) return true;
-        if (map[0][1] == dot && map[1][1] == dot && map[2][1] == dot) return true;
-        if (map[0][2] == dot && map[1][2] == dot && map[2][2] == dot) return true;
-        // check diagonals
-        if (map[0][0] == dot && map[1][1] == dot && map[2][2] == dot) return true;
-        if (map[2][0] == dot && map[1][1] == dot && map[0][2] == dot) return true;
+        for (int i = 0; i < SIZE; i++)
+            for (int j = 0; j < SIZE; j++) {
+                /* check horizontals
+                 * if (map[0][0] == dot && map[0][1] == dot && map[0][2] == dot) return true;
+                 * if (map[1][0] == dot && map[1][1] == dot && map[1][2] == dot) return true;
+                 * if (map[2][0] == dot && map[2][1] == dot && map[2][2] == dot) return true;
+                 */
+                if (map[i][j] == dot && map[i][j+1] == dot && map [i][j+2] == dot)
+                    return true;
+
+                /* check verticals
+                 * if (map[0][0] == dot && map[1][0] == dot && map[2][0] == dot) return true;
+                 * if (map[0][1] == dot && map[1][1] == dot && map[2][1] == dot) return true;
+                 * if (map[0][2] == dot && map[1][2] == dot && map[2][2] == dot) return true;
+                 */
+                if (map[i][j] == dot && map[i + 1][j] == dot && map [i + 2][j] == dot)
+                    return true;
+
+                // check diagonals
+                if (map[0][0] == dot && map[1][1] == dot && map[2][2] == dot) return true;
+                if (map[2][0] == dot && map[1][1] == dot && map[0][2] == dot) return true;
+            }
         return false;
     }
 
