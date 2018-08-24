@@ -1,3 +1,16 @@
+/**
+ * Java 1. Lesson 4. Homework
+ *
+ * 1. Изучить имеющийся код
+ * 
+ * 2. Переделать проверку победы,
+ *    чтобы она не была реализована
+ *    просто набором условий.
+ *
+ * @author Daria Vdovenko
+ * @version dated Aug 24, 2018
+ */
+
 import java.util.Random;// pseudo-artificial intelligence
 import java.util.Scanner;// enter coordinates
 
