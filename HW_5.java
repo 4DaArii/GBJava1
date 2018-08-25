@@ -20,10 +20,15 @@ class HW_5 {
         staff[4] = new Worker("Kuznetsov Artyom", "tester", "artyomovich@gmail.com",
                               "89678844660", 35000, 24);
 
+        /* test for setAge()*/
+           staff[4] = new Worker("Kuznetsov Artyom", "tester", "artyomovich@gmail.com",
+                                 "89678844660", 35000, -8);
+         
+
 
         // find workers older 40 and display them
         for (int i = 0; i < 5; i++) {
-            if (staff[i].age > 40)
+            if (staff[i].getAge() > 40)
                 staff[i].printInfo();
         }
     }
@@ -40,12 +45,12 @@ class HW_5 {
  */
 
 class Worker {
-    String name;
-    String position;
-    String email;
-    String number;
-       int pay;
-       int age;
+    private String name;
+    private String position;
+    private String email;
+    private String number;
+    private int pay;
+    private int age;
 
     // parameterized constructor
     Worker(String name, String position, String email,
@@ -62,6 +67,42 @@ class Worker {
     void printInfo() {
         System.out.println(name + " ( " + age + " y.o.) :" + position + ", " +
                            pay + ", " + email + ", " +number);
+    }
+
+    String getName() {
+        return name;
+    }
+
+    String getPosition() {
+        return position;
+    }
+
+    String getEmail() {
+        return email;
+    }
+
+    String getNumber() {
+        return number;
+    }
+
+    void setPay(int pay) {
+        if (pay > 0)
+            this.pay = pay;
+        else
+            System.out.println("Incorrect age for " + this.name);
+    }
+
+    int getPay() {
+        return pay;
+    }
+
+    void setAge(int age) {
+        if (age > 0)
+            this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
 
