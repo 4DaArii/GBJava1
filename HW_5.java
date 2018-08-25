@@ -7,7 +7,7 @@
 
 class HW_5 {
     public static void main(String[] args) {
-        Associate worker1 = new Associate("Ivan", "programmer", "iva@gmail.com",
+        Worker worker1 = new Worker("Ivan", "programmer", "iva@gmail.com",
                                           "89935648392", 32000, 29);
         worker1.printInfo();
     }
@@ -22,7 +22,7 @@ class HW_5 {
  *    Создать массив из 5 сотрудников.
  *    С помощью цикла вывести информацию только о сотрудниках старше 40 лет;
  */
-class Associate {
+class Worker {
     String name;
     String position;
     String email;
@@ -31,7 +31,7 @@ class Associate {
        int age;
 
     // parameterized constructor
-    Associate(String name, String position, String email,
+    Worker(String name, String position, String email,
               String number, int pay, int age) {
         this.name     = name;
         this.position = position;
