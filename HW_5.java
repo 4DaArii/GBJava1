@@ -7,16 +7,11 @@
 
 class HW_5 {
     public static void main(String[] args) {
-        Associate worker1 = new Associate();
-        worker1.name = "Ivan";
-        worker1.position = "programmer";
-        worker1.email = "iva@gmail.com";
-        worker1.number = "89935648392";
-        worker1.pay = 32000;
-        worker1.age = 29;
+        Associate worker1 = new Associate("Ivan", "programmer", "iva@gmail.com",
+                                          "89935648392", 32000, 29);
         System.out.println(worker1.name + ": " + worker1.position + ", " +
-                            worker1.email + ", " + worker1.number + ", " +
-                                        worker1.pay + ", " + worker1.age);
+                           worker1.email + ", " + worker1.number + ", " +
+                           worker1.pay + ", " + worker1.age);
     }
 }
 
@@ -24,8 +19,8 @@ class HW_5 {
  * 1. Создать класс "Сотрудник" с полями: ФИ, должность,
  *    email, телефон, зарплата, возраст;
  *    Конструктор класса должен заполнять эти поля при создании объекта;
- *    Внутри класса «Сотрудник» написать метод,
- *    который выводит информацию об объекте в консоль; 
+ *      Внутри класса «Сотрудник» написать метод,
+ *      который выводит информацию об объекте в консоль; 
  *    Создать массив из 5 сотрудников.
  *    С помощью цикла вывести информацию только о сотрудниках старше 40 лет;
  */
@@ -34,8 +29,19 @@ class Associate {
     String position;
     String email;
     String number;
-    int pay;
-    int age;
+       int pay;
+       int age;
+
+    // parameterized constructor
+    Associate(String name, String position, String email,
+              String number, int pay, int age) {
+        this.name     = name;
+        this.position = position;
+        this.email    = email;
+        this.number   = number;
+        this.pay      = pay;
+        this.age      = age;
+    }
 }
 
 
