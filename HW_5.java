@@ -7,6 +7,7 @@
 
 class HW_5 {
     public static void main(String[] args) {
+        // array of Workers
         Worker[] staff = new Worker[5];
         staff[0] = new Worker("Ivanov Ivan", "programmer", "iva@gmail.com",
                               "89935648392", 32000, 29);
@@ -18,6 +19,13 @@ class HW_5 {
                               "89075438875", 41000, 38);
         staff[4] = new Worker("Kuznetsov Artyom", "tester", "artyomovich@gmail.com",
                               "89678844660", 35000, 24);
+
+
+        // find workers older 40 and display them
+        for (int i = 0; i < 5; i++) {
+            if (staff[i].age > 40)
+                staff[i].printInfo();
+        }
     }
 }
 
@@ -30,6 +38,7 @@ class HW_5 {
  *    Создать массив из 5 сотрудников.
  *    С помощью цикла вывести информацию только о сотрудниках старше 40 лет;
  */
+
 class Worker {
     String name;
     String position;
@@ -49,9 +58,10 @@ class Worker {
         this.age      = age;
     }
 
+    // displays information of Worker in the console
     void printInfo() {
-        System.out.println(name + ": " + position + ", " + email + ", " +
-                           number + ", " + pay + ", " + age);
+        System.out.println(name + " ( " + age + " y.o.) :" + position + ", " +
+                           pay + ", " + email + ", " +number);
     }
 }
 
