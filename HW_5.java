@@ -9,9 +9,7 @@ class HW_5 {
     public static void main(String[] args) {
         Associate worker1 = new Associate("Ivan", "programmer", "iva@gmail.com",
                                           "89935648392", 32000, 29);
-        System.out.println(worker1.name + ": " + worker1.position + ", " +
-                           worker1.email + ", " + worker1.number + ", " +
-                           worker1.pay + ", " + worker1.age);
+        worker1.printInfo();
     }
 }
 
@@ -41,6 +39,11 @@ class Associate {
         this.number   = number;
         this.pay      = pay;
         this.age      = age;
+    }
+
+    void printInfo() {
+        System.out.println(name + ": " + position + ", " + email + ", " +
+                           number + ", " + pay + ", " + age);
     }
 }
 
