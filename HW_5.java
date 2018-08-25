@@ -7,12 +7,21 @@
 
 class HW_5 {
     public static void main(String[] args) {
-        
+        Associate worker1 = new Associate();
+        worker1.name = "Ivan";
+        worker1.position = "programmer";
+        worker1.email = "iva@gmail.com";
+        worker1.number = "89935648392";
+        worker1.pay = 32000;
+        worker1.age = 29;
+        System.out.println(worker1.name + ": " + worker1.position + ", " +
+                            worker1.email + ", " + worker1.number + ", " +
+                                        worker1.pay + ", " + worker1.age);
     }
 }
 
 /**
- * 1. Создать класс "Сотрудник" с полями: ФИО, должность,
+ * 1. Создать класс "Сотрудник" с полями: ФИ, должность,
  *    email, телефон, зарплата, возраст;
  *    Конструктор класса должен заполнять эти поля при создании объекта;
  *    Внутри класса «Сотрудник» написать метод,
@@ -28,3 +37,5 @@ class Associate {
     int pay;
     int age;
 }
+
+
