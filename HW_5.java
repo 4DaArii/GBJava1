@@ -7,9 +7,17 @@
 
 class HW_5 {
     public static void main(String[] args) {
-        Worker worker1 = new Worker("Ivan", "programmer", "iva@gmail.com",
-                                          "89935648392", 32000, 29);
-        worker1.printInfo();
+        Worker[] staff = new Worker[5];
+        staff[0] = new Worker("Ivanov Ivan", "programmer", "iva@gmail.com",
+                              "89935648392", 32000, 29);
+        staff[1] = new Worker("Petrov Peter", "cleaner", "peter@gmail.com",
+                              "89535478432", 15000, 41);
+        staff[2] = new Worker("Vasiliev Vasiliy", "engineer", "vvvasiliev@gmail.com",
+                              "89547833225", 53000, 45);
+        staff[3] = new Worker("Smirnov Igor", "developer", "igogogor@gmail.com",
+                              "89075438875", 41000, 38);
+        staff[4] = new Worker("Kuznetsov Artyom", "tester", "artyomovich@gmail.com",
+                              "89678844660", 35000, 24);
     }
 }
 
